@@ -1,0 +1,391 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+/* Main Layout using CSS Grid */
+.page {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas: 
+        "nav"
+        "home"
+        "categories"
+        "contact"
+        "footer";
+}
+
+/* Assigning Grid Areas */
+.navbar { grid-area: nav; }
+.home-section { grid-area: home; }
+.categories-section { grid-area: categories; }
+.contact-section { grid-area: contact; }
+.main-footer { grid-area: footer; }
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img { height: 40px; }
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 700;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover { color: #ff6b6b; }
+
+/* Home Section */
+.home-section {
+    height: 130vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                url('images/OR-Shopping-Addiction.svg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: #fca5c5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+   
+}
+
+.home-section h1 { font-size: 3rem; margin-bottom: 20px; }
+.home-section p { font-size: 1.2rem; margin-bottom: 30px; }
+
+.shop-now-btn {
+    padding: 12px 30px;
+    background: #ff6b6b;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: transform 0.3s;
+}
+
+.shop-now-btn:hover { transform: scale(1.05); }
+
+/* Categories Section using Grid Template Columns */
+.categories-section {
+    padding: 80px 5%;
+    text-align: center;
+}
+
+.category-grid {
+    display: grid;
+    /* This creates a responsive grid automatically */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.category-card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.category-card:hover { transform: translateY(-10px); }
+
+.category-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.category-card h3 { padding: 15px 0; }
+
+.category-card a {
+    display: block;
+    padding: 10px;
+    background: #333;
+    color: #fff;
+    text-decoration: none;
+    margin: 15px;
+    border-radius: 5px;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 80px 5%;
+    background: #eee;
+}
+
+.contact-section h2 { text-align: center; margin-bottom: 40px; }
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 50px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    padding: 15px;
+    background: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Footer Area */
+.main-footer {
+    background: #222;
+    color: #fff;
+    padding: 40px 5%;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 1.5rem;
+}
+
+.social-links a { color: #fff; }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .contact-container { grid-template-columns: 1fr; }
+    .home-section h1 { font-size: 2rem; }
+}
+/* --- Accessories Page Styles --- */
+
+/* Heading Styling */
+h1 {
+    font-family: 'Pacifico', cursive; /* Using the font you imported */
+    text-align: center;
+    font-size: 3.5rem;
+    color: #b4acac;
+    margin: 40px 0;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Products Container using Grid */
+.container {
+    display: grid;
+    /* Creating a 4-column layout that adjusts to screen size */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    /* Rows will automatically adjust based on content */
+    grid-template-rows: auto; 
+    gap: 30px;
+    padding: 0 5% 80px 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Individual Card using Grid Area */
+.card {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    display: grid;
+    /* Defining the layout inside the card */
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 250px auto auto auto;
+    grid-template-areas: 
+        "prod-img prod-img"
+        "prod-title prod-title"
+        "prod-desc prod-desc"
+        "prod-price prod-btn";
+    padding-bottom: 20px;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+/* Assigning elements to Grid Areas */
+.card img {
+    grid-area: prod-img;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card h2 {
+    grid-area: prod-title;
+    padding: 20px 20px 5px 20px;
+    font-size: 1.4rem;
+    color: #222;
+}
+
+.card p {
+    grid-area: prod-desc;
+    padding: 0 20px 15px 20px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.card .price {
+    grid-area: prod-price;
+    padding-left: 20px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #ff6b6b;
+    display: flex;
+    align-items: center;
+}
+
+.card button {
+    grid-area: prod-btn;
+    margin-right: 20px;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.card button:hover {
+    background-color: #ff6b6b;
+}
+
+/* Responsive Tweak */
+/* Single column on small phones */
+@media (max-width: 600px) {
+    .container {
+        grid-template-columns: 1fr; 
+    }
+    
+    h1 {
+        font-size: 2.5rem;
+    }
+}
+/* --- Updated Layout for Uniform Boxes --- */
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    /* Forces all cards in the same row to have the exact same height */
+    grid-auto-rows: 1fr; 
+    gap: 30px;
+    padding: 0 5% 80px 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.card {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    display: grid;
+    /* We lock the row heights so the boxes don't grow/shrink with text */
+    grid-template-rows: 250px 60px 80px auto; 
+    grid-template-areas: 
+        "prod-img prod-img"
+        "prod-title prod-title"
+        "prod-desc prod-desc"
+        "prod-price prod-btn";
+    padding-bottom: 20px;
+    height: 100%; /* Ensures card fills the grid row height */
+}
+
+.card img {
+    grid-area: prod-img;
+    width: 100%;
+    height: 100%;
+    /* 'contain' shows the whole pic; 'cover' crops it. 
+       We use contain to see the full product. */
+    object-fit: contain; 
+    background-color: #fcfcfc; /* Adds a light backdrop if the image is narrow */
+    padding: 10px; /* Gives the image some breathing room */
+}
+
+/* Ensure title and description don't break the layout if text is long */
+.card h2 {
+    grid-area: prod-title;
+    padding: 15px 20px 5px 20px;
+    font-size: 1.2rem;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Limits title to 2 lines */
+    -webkit-box-orient: vertical;
+}
+
+.card p {
+    grid-area: prod-desc;
+    padding: 0 20px;
+    font-size: 0.85rem;
+    color: #666;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Limits description to 3 lines */
+    -webkit-box-orient: vertical;
+}
+
+.card .price {
+    grid-area: prod-price;
+    padding-left: 20px;
+    align-self: end; /* Keeps price at the bottom */
+}
+
+.card button {
+    grid-area: prod-btn;
+    margin: 0 20px;
+    align-self: end; /* Keeps button at the bottom */
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap  ">
+    <link rel="icon" href="https://png.pngtree.com/png-vector/20220601/ourmid/pngtree-shop-logo-design-with-a-handshake-in-bag-png-image_4749125.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+</head>
+<body>
+    <div class="page">
+        <nav class="navbar">
+            <div class="logo">
+                <img src="https://png.pngtree.com/png-vector/20220601/ourmid/pngtree-shop-logo-design-with-a-handshake-in-bag-png-image_4749125.png" alt="Nova Logo">
+                <span>Nova</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="#categories">Categories</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <section id="home" class="home-section">
+            <h1 class="animate__animated animate__fadeInDown">Welcome to Nova Online Shopping</h1>
+            <p class="animate__animated animate__fadeInUp">Your safe destination for all your shopping needs you can find here everything you want .</p>
+            <button class="shop-now-btn" onclick="location.href='#categories'">Start Shopping</button>
+        </section>
+        <section id="categories" class="categories-section">
+            <h2>Our Categories</h2>
+            <div class="category-grid">
+                <div class="category-card">
+                    <img src="images/devices.jpg" alt="Category 1">
+                    <h3>Electronics</h3>
+                    <a href="Electronics.html">View Products</a>
+                </div>
+                <div class="category-card">
+                    <img src="images/accessories.jpg" alt="Category 1">
+                    <h3>Accessories</h3>
+                    <a href="accessories.html">View Products</a>
+                </div>
+                <div class="category-card">
+                    <img src="images/Womens-Clothing.jpg" alt="Category 2">
+                    <h3>Clothing</h3>
+                    <a href="clothes.html">View Products</a>
+                </div>
+                <div class="category-card">
+                    <img src="images/home.jpg" alt="Category 3">
+                    <h3>Home & Kitchen</h3>
+                    <a href="home.html">View Products</a>
+                </div>
+                <div class="category-card">
+                    <img src="images/skin.jpg" alt="Category 3">
+                    <h3>Skincare</h3>
+                    <a href="skin.html">View Products</a>
+                </div>
+            </div>
+        </section>
+    </div>
+    <section id="contact" class="contact-section">
+            <h2>Contact Us</h2>
+            <div class="contact-container">
+                <form class="contact-form">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message" rows="5" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+                <div class="contact-info">
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Nova St, Cairo, Egypt</p>
+                    <p><i class="fas fa-envelope"></i> support@nova.com</p>
+                    <p><i class="fas fa-phone"></i> +20 123 456 789</p>
+                </div>
+            </div>
+        </section>
+
+        <footer class="main-footer">
+            <div class="footer-content">
+                <p>&copy; 2026 Nova Online Shopping. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </footer>
+</body>
+</html>
